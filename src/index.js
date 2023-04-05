@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import { hashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Australia from "./pages/Australia";
@@ -9,7 +9,7 @@ import NoPage from "./pages/NoPage";
 
 export default function App() {
   return (
-    <hashRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -19,10 +19,9 @@ export default function App() {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-    </hashRouter>
+    </HashRouter>
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
-
